@@ -15,7 +15,7 @@
             Artikel artikel10 = new(10, "Lampe", "Stehlampe aus Metal", "Möbel", 59.99, 1, 15, 15);
             Artikel artikel11 = new(11, "Monitor", "LCD Flachbildschirm Full HD", "Elektronik", 149.99, 1, 15, 15);
             Artikel artikel12 = new(12, "Heringstip", "Hering in Sahnesauce mit Äpfeln und Zwiebeln", "Nahrung", 49.99, 1, 15, 15);
-            Artikel artikel13 = new(13, "Äpfel", "6 Jazz Äpfel", "Nahrung", 49.99, 1, 15, 15);
+            Artikel artikel13 = new(13, "Äpfel", "6 x Jazz Apfel", "Nahrung", 12, 1, 15, 15);
             lager.AddArtikel(artikel1);
             lager.AddArtikel(artikel2);
             lager.AddArtikel(artikel3);
@@ -116,11 +116,11 @@
                     while (zahl >= 0) {
                         Console.Write("Bitte Artikelnummer angeben(-1 für abbruch):");
                         zahl = Convert.ToInt32(Console.ReadLine());
-                        if (lager.ArtikelAuswaehlen(zahl) == null) {
+                        if (lager.ArtikelSuchen(zahl) == null) {
                             Console.WriteLine($"Es gibt kein Artikel mit der Artikelnummer {zahl}");
                         }
                         else {
-                            auswahl = lager.ArtikelAuswaehlen(zahl);
+                            auswahl = lager.ArtikelSuchen(zahl);
                             break;
                         }
                     }
