@@ -29,6 +29,17 @@
             lager.AddArtikel(artikel11);
             lager.AddArtikel(artikel12);
             lager.AddArtikel(artikel13);
+            Anbieter anbieter1 = new Anbieter();
+            anbieter1.Setname("IKEA");
+            AnbieterArtikelListe artikelAnbieter1 = new AnbieterArtikelListe();
+            artikelAnbieter1.SetAnbieter(anbieter1);
+            artikelAnbieter1.AddArtikel(artikel1);
+            artikelAnbieter1.AddArtikel(artikel2);
+            artikelAnbieter1.AddArtikel(artikel3);
+            artikelAnbieter1.AddArtikel(artikel4);
+            artikelAnbieter1.AddArtikel(artikel6);
+            artikelAnbieter1.AddArtikel(artikel7);
+            artikelAnbieter1.AddArtikel(artikel10);
             Gast gast = new Gast();         
             bool online = true;
             String antwort = "";

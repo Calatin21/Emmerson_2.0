@@ -1,4 +1,6 @@
-﻿namespace Emmerson_2._0 {
+﻿using System.Reflection.Emit;
+
+namespace Emmerson_2._0 {
     internal class Gast {
         int id;
         Warenkorb warenkorb;
@@ -38,6 +40,15 @@
             Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.Yellow;
             lager.ArtikelSuchen(wort);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("");
+        }
+        public void AnbieterSuche(ArtikelAngebot aa,int nummer)
+        {
+            Console.WriteLine("Anbieter Suche hat folgende Treffer ergeben:");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            aa.PrintAnbieterArtikelListe(aa.SucheAnbieter(nummer));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("");
         }
